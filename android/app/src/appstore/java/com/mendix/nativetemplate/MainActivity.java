@@ -20,7 +20,7 @@ public class MainActivity extends MendixReactActivity {
         Boolean hasDeveloperSupport = ((MainApplication) getApplication()).getUseDeveloperSupport();
         mendixApp = new MendixApp(AppUrl.getUrlFromResource(this), MxConfiguration.WarningsFilter.none, hasDeveloperSupport, false);
         super.onCreate(savedInstanceState);
-        AppCenter.start(getApplication(), "e92844ae-fde0-44c8-9175-72d440f340a5",
+        AppCenter.start(getApplication(), "50127c96-8baa-4789-915d-3b570aed921f",
                   Analytics.class, Crashes.class);
     }
 }
