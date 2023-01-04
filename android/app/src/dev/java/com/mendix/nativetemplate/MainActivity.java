@@ -42,6 +42,10 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
+
 public class MainActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
     static private final int CAMERA_REQUEST = 1;
     private final Executor httpExecutor = Executors.newSingleThreadExecutor();
@@ -79,6 +83,8 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         startCameraWithPermissions();
 
         handleLaunchWithData(getIntent());
+        
+        AppCenter.start(getApplication(), "50127c96-8baa-4789-915d-3b570aed921f", Analytics.class, Crashes.class);
     }
 
     @Override
