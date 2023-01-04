@@ -121,8 +121,5 @@
         "nativeOTA": {
             "enabled": false
         }
-    },
-    "appVersion": "0.0.0",
-    "buildNumber": 1,
-    "runtimeUrl": "http://coolapp.com"
+    }
 }
